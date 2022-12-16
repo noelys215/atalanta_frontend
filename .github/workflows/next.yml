@@ -6,13 +6,6 @@ on:
         branches: [main]
 jobs:
     build:
-        env:
-            CI: true
-            API_URL: ${{secrets.API_URL}}
-            JWT_SECRET: ${{secrets.JWT_SECRET}}
-            PAYPAL_CLIENT_ID: ${{secrets.PAYPAL_CLIENT_ID}}
-            RECAPTCHA_SITE_KEY: ${{secrets.RECAPTCHA_SITE_KEY}}
-            RECAPTCHA_SECRET_KEY: ${{secrets.RECAPTCHA_SECRET_KEY}}
         strategy:
             matrix:
                 node-version: [16.x]
@@ -28,4 +21,4 @@ jobs:
                   PAYPAL_CLIENT_ID: ${{secrets.PAYPAL_CLIENT_ID}}
                   RECAPTCHA_SITE_KEY: ${{secrets.RECAPTCHA_SITE_KEY}}
                   RECAPTCHA_SECRET_KEY: ${{secrets.RECAPTCHA_SECRET_KEY}}
-            - run: npm run build frontend
+            - run: npm run build
