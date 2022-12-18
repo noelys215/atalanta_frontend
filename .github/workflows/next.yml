@@ -21,5 +21,5 @@ jobs:
                   JWT_SECRET: ${{secrets.JWT_SECRET}}
                   PAYPAL_CLIENT_ID: ${{secrets.PAYPAL_CLIENT_ID}}
                   RECAPTCHA_SITE_KEY: ${{secrets.RECAPTCHA_SITE_KEY}}
-                  RECAPTCHA_SECRET_KEY: ${{secrets.RECAPTCHA_SECRET_KEY}
+                  RECAPTCHA_SECRET_KEY: ${{secrets.RECAPTCHA_SECRET_KEY}}
             - run: npm run build
