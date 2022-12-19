@@ -47,5 +47,8 @@ jobs:
                   echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
                   ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
 
-                    docker run --restart=always -p 3000:3000 noely215/atalanta_next_frontend
+                    docker pull noely215/atalanta_next_frontend:latest &&
+                    docker stop db09af6a432b &&
+                    docker rm db09af6a432b &&
+                    docker run --name=db09af6a432b --restart=always -p 3000:3000 noely215/atalanta_next_frontend
                   '
