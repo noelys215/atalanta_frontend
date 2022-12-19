@@ -18,7 +18,7 @@ const Hero = () => {
 					fontFamily={'Cinzel'}
 					textAlign="center"
 					width={'100%'}>
-					Atalanta Athletic Clu
+					Atalanta Athletic Club
 				</Typography>
 				<Typography
 					variant="body1"
