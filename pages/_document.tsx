@@ -9,6 +9,9 @@ export default class MyDocument extends Document {
 			<Html lang="en">
 				<Head>
 					{/* PWA primary color */}
+					<meta
+						http-equiv="Content-Security-Policy"
+						content="upgrade-insecure-requests"></meta>
 					<meta name="theme-color" content={theme.palette.primary.main} />
 
 					<link rel="preconnect" href="https://fonts.googleapis.com" />
