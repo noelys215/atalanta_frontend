@@ -49,5 +49,5 @@ jobs:
 
                     #Now we have got the access of EC2 and we will start the deploy .
                     docker run &&
-                    docker run --restart=always -p 3000:3000 noely215/atalanta_next_frontend &&
+                    docker run --restart=always -p 3000:3000 noely215/atalanta_next_frontend
                   '
