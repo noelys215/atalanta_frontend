@@ -51,4 +51,5 @@ jobs:
                     docker stop db09af6a432b &&
                     docker rm db09af6a432b &&
                     docker run --name=db09af6a432b --restart=always -p 3000:3000 noely215/atalanta_next_frontend
+                    exit
                   '
