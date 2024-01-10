@@ -30,9 +30,7 @@ export default function MyApp(props: MyAppProps) {
 		setShowChild(true);
 	}, []);
 
-	if (!showChild) {
-		return null;
-	}
+	if (!showChild) return null;
 
 	const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
 
