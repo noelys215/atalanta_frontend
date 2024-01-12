@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 node:15-alpine
+FROM --platform=linux/amd64 node:18-alpine
 
 ENV NODE_ENV=production
 
