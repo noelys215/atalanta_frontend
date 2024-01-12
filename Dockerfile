@@ -1,10 +1,10 @@
 FROM --platform=linux/amd64 node:16-alpine
 
-RUN mkdir -p /app
+# ENV NODE_ENV=production
 
 WORKDIR /app
 
-COPY package.json /app
+COPY . .
 
 RUN npm install 
 
