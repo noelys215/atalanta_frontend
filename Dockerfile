@@ -1,17 +1,21 @@
-FROM --platform=linux/amd64 node:16-alpine
+# Step 1: Base Image
+FROM node:latest
 
 # ENV NODE_ENV=production
 
+
+# Step 2: Set Working Directory
 WORKDIR /app
 
+# Step 3: Install Dependencies
+COPY package*.json ./
+RUN npm install
+
+# Step 4: Copy Source Code
 COPY . .
 
-RUN npm install 
+# Step 5: Build the Application
+RUN npm run build
 
-COPY . /app
-
-RUN npm run build 
-
-EXPOSE 3000
-
-CMD [ "npm", "start" ]
+# Step 6: Start Command
+CMD ["npm", "start"]
