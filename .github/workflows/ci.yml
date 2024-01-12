@@ -16,6 +16,6 @@ jobs:
                   DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
               run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
             - name: Build the Docker image
-              run: docker build -t atalanta-pipeline .
+              run: docker build -t atalanta-pipeline . --platform linux/x86_64
             - name: Push to Dockerhub
               run: docker push noely215/atalanta-pipeline:latest
