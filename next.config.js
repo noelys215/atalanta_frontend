@@ -19,4 +19,16 @@ module.exports = {
 		loader: 'default',
 		unoptimized: true,
 	},
+	webpack(config, { isServer }) {
+		if (!isServer) {
+			config.plugins.push(
+				new webpack.DefinePlugin({
+					'process.exit': function () {
+						return null;
+					},
+				})
+			);
+		}
+		return config;
+	},
 };
